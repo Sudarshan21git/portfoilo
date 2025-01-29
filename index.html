@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudarshan Sharma - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating-image {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .text-accent { color: #ef4444 }
+        .bg-accent { background-color: #ef4444 }
+        .border-accent { border-color: #ef4444 }
+
+        .timeline-item {
+            border-left: 3px solid #ef4444;
+            padding-left: 2rem;
+            position: relative;
+            margin-left: 1rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #ef4444;
+            border-radius: 50%;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(239, 68, 68, 0.1);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold text-accent">SS.</a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-accent transition-colors">Home</a>
+                    <a href="#about" class="hover:text-accent transition-colors">About</a>
+                    <a href="#education" class="hover:text-accent transition-colors">Education</a>
+                    <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+                </div>
+
+                <button id="mobileMenuButton" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen pt-20 flex items-center">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-[1fr_0.8fr] gap-16 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Hi, I'm <br>
+                        <span class="text-accent">Sudarshan Sharma</span>
+                    </h1>
+                    <div class="text-2xl md:text-3xl mb-8">
+                        <span id="typed" class="text-accent"></span>
+                    </div>
+                    <p class="text-gray-400 mb-8 max-w-xl">
+                        Full Stack Developer passionate about creating beautiful and functional web experiences.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#projects" class="bg-accent px-8 py-3 rounded-lg hover:bg-red-500 transition-colors">
+                            View Projects
+                        </a>
+                        <a href="#contact" class="border-2 border-accent px-8 py-3 rounded-lg hover:bg-red-500/10 transition-colors">
+                            Hire Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute -inset-2 bg-accent/30 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="your-image.jpg" 
+                         class="relative z-10 w-full h-auto rounded-full border-4 border-accent floating-image"
+                         alt="Profile">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                About <span class="text-accent">Me</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center">
+                    <img src="about-image.jpg" 
+                         alt="About Sudarshan"
+                         class="rounded-lg w-full max-w-md card-hover">
+                </div>
+                
+                <div>
+                    <p class="text-gray-400 mb-6">
+                        I'm a full-stack developer with 3+ years of experience in creating web applications. 
+                        My passion lies in building efficient backend systems and elegant frontend interfaces.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-gray-800/50 rounded-lg card-hover">
+                            <h3 class="text-accent font-bold">Experience</h3>
+                            <p>3+ Years</p>
+                        </div>
+                        <div class="p-4 bg-gray-800/50 rounded-lg card-hover">
+                            <h3 class="text-accent font-bold">Projects</h3>
+                            <p>20+ Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-900/30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                My <span class="text-accent">Education</span>
+            </h2>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-8">
+                    <div class="timeline-item card-hover">
+                        <h3 class="text-2xl font-bold mb-2">BCA (Bachelor of Computer Applications)</h3>
+                        <p class="text-accent font-semibold mb-2">University Name</p>
+                        <p class="text-gray-400">2022 - 2025</p>
+                        <p class="text-gray-400 mt-2">Relevant Coursework: Web Development, Database Management, OOPs</p>
+                    </div>
+
+                    <div class="timeline-item card-hover">
+                        <h3 class="text-2xl font-bold mb-2">Higher Secondary</h3>
+                        <p class="text-accent font-semibold mb-2">School Name</p>
+                        <p class="text-gray-400">2020 - 2022</p>
+                        <p class="text-gray-400 mt-2">Major: Computer Science</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                My <span class="text-accent">Skills</span>
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
+                    <i class="fab fa-react text-4xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">React</h3>
+                    <p class="text-gray-400">Advanced</p>
+                </div>
+                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
+                    <i class="fab fa-node text-4xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Node.js</h3>
+                    <p class="text-gray-400">Advanced</p>
+                </div>
+                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
+                    <i class="fab fa-js text-4xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">JavaScript</h3>
+                    <p class="text-gray-400">Expert</p>
+                </div>
+                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
+                    <i class="fas fa-database text-4xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">MongoDB</h3>
+                    <p class="text-gray-400">Intermediate</p>
+                </div>
+                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
+                    <i class="fab fa-python text-4xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Python</h3>
+                    <p class="text-gray-400">Intermediate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Recent <span class="text-accent">Projects</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 rounded-lg overflow-hidden card-hover">
+                    <img src="project-image.jpg" alt="Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-400 mb-4">Full-stack e-commerce solution with payment gateway</p>
+                        <div class="flex gap-2">
+                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 rounded-lg overflow-hidden card-hover">
+                    <img src="project-image.jpg" alt="Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Task Management App</h3>
+                        <p class="text-gray-400 mb-4">Real-time collaborative task management system</p>
+                        <div class="flex gap-2">
+                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Next.js</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Firebase</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Get in <span class="text-accent">Touch</span>
+            </h2>
+            
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Your Name" 
+                               class="w-full p-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email" 
+                               class="w-full p-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                    </div>
+                    <div>
+                        <textarea rows="5" placeholder="Your Message"
+                               class="w-full p-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-accent py-3 rounded-lg hover:bg-red-500 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Sudarshan Sharma</h3>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="hover:text-accent transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-accent transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-accent transition-colors">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-400">&copy; 2024 Sudarshan Sharma. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        new Typed('#typed', {
+            strings: ['Web Developer', 'UI/UX Designer', 'Full Stack Engineer'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
