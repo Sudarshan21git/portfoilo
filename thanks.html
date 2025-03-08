@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Sudarshan Sharma</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .thanks-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .thanks-container h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .thanks-container p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        
+        .icon-success {
+            font-size: 5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .redirect-text {
+            font-style: italic;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="thanks-container">
+        <div class="icon-success">✓</div>
+        <h1>Thank You!</h1>
+        <p>Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+        <a href="index.html" class="btn primary-btn">Back to Homepage</a>
+        <p class="redirect-text">You will be redirected automatically in 5 seconds...</p>
+    </div>
+
+    <script>
+        // Redirect back to main page after 5 seconds
+        setTimeout(() => {
+            window.location.href = 'index.html#contact';
+        }, 5000);
+    </script>
+</body>
+</html>
+

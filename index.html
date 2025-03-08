@@ -3,138 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudarshan Sharma - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        .floating-image {
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .gradient-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
-
-        .text-accent { color: #ef4444 }
-        .bg-accent { background-color: #ef4444 }
-        .border-accent { border-color: #ef4444 }
-
-        .timeline-item {
-            border-left: 3px solid #ef4444;
-            padding-left: 2rem;
-            position: relative;
-            margin-left: 1rem;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -10px;
-            top: 0;
-            width: 20px;
-            height: 20px;
-            background: #ef4444;
-            border-radius: 50%;
-        }
-
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(239, 68, 68, 0.1);
-        }
-    </style>
+    <title>Sudarshan Sharma | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="gradient-bg text-gray-100">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-sm z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="#home" class="text-2xl font-bold text-accent">SS.</a>
-                
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-accent transition-colors">Home</a>
-                    <a href="#about" class="hover:text-accent transition-colors">About</a>
-                    <a href="#education" class="hover:text-accent transition-colors">Education</a>
-                    <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
-                    <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
-                    <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
-                </div>
-
-                <button id="mobileMenuButton" class="md:hidden">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#home">SS.</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen pt-20 flex items-center">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-[1fr_0.8fr] gap-16 items-center">
-                <div class="text-center md:text-left">
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                        Hi, I'm <br>
-                        <span class="text-accent">Sudarshan Sharma</span>
-                    </h1>
-                    <div class="text-2xl md:text-3xl mb-8">
-                        <span id="typed" class="text-accent"></span>
-                    </div>
-                    <p class="text-gray-400 mb-8 max-w-xl">
-                        BCA student and passionate backend developer, transforming ideas into innovative digital solutions.  </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#projects" class="bg-accent px-8 py-3 rounded-lg hover:bg-red-500 transition-colors">
-                            View Projects
-                        </a>
-                        <a href="#contact" class="border-2 border-accent px-8 py-3 rounded-lg hover:bg-red-500/10 transition-colors">
-                            Hire Me
-                        </a>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Sudarshan Sharma</span></h1>
+                    <h2 class="typed-text"></h2>
+                    <p>BCA student and passionate backend developer, transforming ideas into innovative digital solutions.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary-btn">View Projects</a>
+                        <a href="#contact" class="btn secondary-btn">Hire Me</a>
                     </div>
                 </div>
-
-                <div class="relative group">
-                    <div class="absolute -inset-2 bg-accent/30 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity"></div>
-                    <img src="./img/profile.JPG" 
-                         class="relative z-10 w-full h-auto rounded-full border-4 border-accent floating-image"
-                         alt="Profile">
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="./img/profile.JPG" alt="Sudarshan Sharma">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">
-                About <span class="text-accent">Me</span>
-            </h2>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="flex justify-center">
-                    <img src="./img/about.jpg" 
-                         alt="About Sudarshan"
-                         class="rounded-lg w-full max-w-md card-hover">
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./img/about.jpg" alt="About Sudarshan">
                 </div>
-                
-                <div>
-                    <p class="text-gray-400 mb-6">
-                        "I’m currently in my third year of BCA and have a deep passion for backend development, particularly with c#,asp.net. I love creating efficient, scalable web applications and have a strong interest in data science. Problem-solving is something I enjoy greatly, and I’m also fascinated by mathematics."
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="p-4 bg-gray-800/50 rounded-lg card-hover">
-                            <h3 class="text-accent font-bold">Experience</h3>
+                <div class="about-text">
+                    <p>"I'm currently in my third year of BCA and have a deep passion for backend development, particularly with C#, ASP.NET. I love creating efficient, scalable web applications and have a strong interest in data science. Problem-solving is something I enjoy greatly, and I'm also fascinated by mathematics."</p>
+                    <div class="about-cards">
+                        <div class="card">
+                            <h3>Experience</h3>
                             <p>Currently Learning</p>
                         </div>
-                        <div class="p-4 bg-gray-800/50 rounded-lg card-hover">
-                            <h3 class="text-accent font-bold">Projects</h3>
+                        <div class="card">
+                            <h3>Projects</h3>
                             <p>5+ Completed</p>
                         </div>
                     </div>
@@ -144,126 +93,104 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-20 bg-gray-900/30">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">
-                My <span class="text-accent">Education</span>
-            </h2>
-
-            <div class="max-w-3xl mx-auto">
-                <div class="space-y-8">
-                    <div class="timeline-item card-hover">
-                        <h3 class="text-2xl font-bold mb-2">BCA (Bachelor of Computer Applications)</h3>
-                        <p class="text-accent font-semibold mb-2">Tribhuvan University|Ratna Rajyalaxmi Campus</p>
-                        <p class="text-gray-400">2021 - 2026</p>
-                        <p class="text-gray-400 mt-2">Relevant Coursework: Web Development, Database Management, OOPs</p>
-                    </div>
-
-                    <div class="timeline-item card-hover">
-                        <h3 class="text-2xl font-bold mb-2">Higher Secondary</h3>
-                        <p class="text-accent font-semibold mb-2">GoldenGate International School|</p>
-                        <p class="text-gray-400">2019 - 2021</p>
-                        <p class="text-gray-400 mt-2">Major: Mathematics</p>
-                    </div>
-                    <div class="timeline-item card-hover">
-                        <h3 class="text-2xl font-bold mb-2">School</h3>
-                        <p class="text-accent font-semibold mb-2">Shree DeupurNamuna English Secondary Boarding School</p>
-                        <p class="text-gray-400">2019 batch</p>
-                        <p class="text-gray-400 mt-2">Completed my schooling from grade Nursery to 10 in this institution with Grade'A'</p>
-                    </div>
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Education</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>BCA (Bachelor of Computer Applications)</h3>
+                    <h4>Tribhuvan University | Ratna Rajyalaxmi Campus</h4>
+                    <p class="year">2021 - 2026</p>
+                    <p>Relevant Coursework: Web Development, Database Management, OOPs</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Higher Secondary</h3>
+                    <h4>GoldenGate International School</h4>
+                    <p class="year">2019 - 2021</p>
+                    <p>Major: Mathematics</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>School</h3>
+                    <h4>Shree DeupurNamuna English Secondary Boarding School</h4>
+                    <p class="year">2019 batch</p>
+                    <p>Completed my schooling from grade Nursery to 10 in this institution with Grade 'A'</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-900/50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">
-                My <span class="text-accent">Skills</span>
-            </h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
-                    <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">HTML</h3>
-                    
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
                 </div>
-               
-                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
-                    <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">CSS</h3>
-                   
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
                 </div>
-                
-                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
-                    <i class="fab fa-js text-4xl text-accent mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">JavaScript</h3>
-                 
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
                 </div>
-                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
-                    <i class="fab fa-php text-4xl text-purple-500 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">PHP</h3>
-                    
+                <div class="skill-card">
+                    <i class="fab fa-php"></i>
+                    <h3>PHP</h3>
                 </div>
-                
-                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
-                    <i class="fab fa-python text-4xl text-accent mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Python</h3>
-                
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
                 </div>
-                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
-                    <i class="fab fa-laravel text-4xl text-red-500 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Laravel</h3>
-                  
+                <div class="skill-card">
+                    <i class="fab fa-laravel"></i>
+                    <h3>Laravel</h3>
                 </div>
-                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
-                    <i class="fab fa-github text-4xl text-white mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-2">GitHub</h3>
+                <div class="skill-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
                 </div>
-                <div class="p-6 bg-gray-800/50 rounded-lg card-hover">
-                    <i class="fas fa-database text-4xl text-white mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-2">MySQL</h3>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>MySQL</h3>
                 </div>
-                
-                
-            
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">
-                Recent <span class="text-accent">Projects</span>
-            </h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800/50 rounded-lg overflow-hidden card-hover">
-                    <img src=".\img\enursery.jpg" alt="Project" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">E-nursery Platform</h3>
-                        <p class="text-gray-400 mb-4">Full-stack e-commerce solution with payment gateway</p>
-                        <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Html</span>
-                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Css</span>
-                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">JavaScript</span>
-                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">PHP</span>
-                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">MySql</span>
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Recent <span class="highlight">Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./img/enursery.jpg" alt="E-nursery Platform">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-nursery Platform</h3>
+                        <p>Full-stack e-commerce solution with payment gateway</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="bg-gray-800/50 rounded-lg overflow-hidden card-hover">
-                    <img src=".\img\bakery.jpg" alt="Project" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Bakery Website</h3>
-                        <p class="text-gray-400 mb-4">E-commerce Website</p>
-                        <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">PHP</span>
-                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Larvel</span>
-                           
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./img/bakery.jpg" alt="Bakery Website">
+                    </div>
+                    <div class="project-info">
+                        <h3>Bakery Website</h3>
+                        <p>E-commerce Website</p>
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>Laravel</span>
                         </div>
                     </div>
                 </div>
@@ -272,73 +199,76 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-900/50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">
-                Get in <span class="text-accent">Touch</span>
-            </h2>
-            
-            <div class="max-w-2xl mx-auto">
-                <form class="space-y-6">
-                    <div>
-                        <input type="text" placeholder="Your Name" 
-                               class="w-full p-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in <span class="highlight">Touch</span></h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>sudarshansharma3532@gmail.com</p>
+                        </div>
                     </div>
-                    <div>
-                        <input type="email" placeholder="Your Email" 
-                               class="w-full p-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Kathmandu, Nepal</p>
+                        </div>
                     </div>
-                    <div>
-                        <textarea rows="5" placeholder="Your Message"
-                               class="w-full p-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                    <div class="social-links">
+                        <a href="https://github.com/Sudarshan21git" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sudarshan-sharma-55001b236" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/@sudarshansharma867" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/mr.sudarshansharma/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
-                    <button type="submit" 
-                            class="w-full bg-accent py-3 rounded-lg hover:bg-red-500 transition-colors">
-                        Send Message
-                    </button>
+                </div>
+                <form id="contactForm" action="https://formsubmit.co/sudarshansharma3532@gmail.com" method="POST" class="contact-form">
+                    <!-- FormSubmit configuration -->
+                    <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+                    
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                    
+                    <div id="form-status"></div>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8">
-        <div class="container mx-auto px-6">
-            <div class="text-center">
-                <h3 class="text-2xl font-bold mb-4 text-white">Sudarshan Sharma</h3>
-                <div class="flex justify-center space-x-6 mb-6">
-                    <a href="https://github.com/Sudarshan21git" class="text-gray-400 hover:text-white transition-transform transform hover:scale-110">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sudarshan-sharma-55001b236" class="text-gray-400 hover:text-blue-500 transition-transform transform hover:scale-110">
-                        <i class="fab fa-linkedin text-2xl"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@sudarshansharma867" class="text-gray-400 hover:text-red-500 transition-transform transform hover:scale-110">
-                        <i class="fab fa-youtube text-2xl"></i>
-                    </a>
-                    <a href="https://www.instagram.com/mr.sudarshansharma/" class="text-gray-400 hover:text-pink-500 transition-transform transform hover:scale-110">
-                        <i class="fab fa-instagram text-2xl"></i>
-                    </a>
-                </div>
-                <p class="text-gray-400">&copy; 2024 Sudarshan Sharma. All rights reserved.</p>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Sudarshan Sharma</h3>
+                <p>&copy; 2024 Sudarshan Sharma. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
 
-    <script>
-        new Typed('#typed', {
-            strings: ['Web Developer', 'PHP Developer', 'BCA Student', 'Backend Developer', 'Solution-Oriented Developer'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: true
-        });
+    <!-- Thanks page for form submission -->
+    <div id="thanks-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Thank You!</h2>
+            <p>Your message has been sent successfully. I'll get back to you soon.</p>
+            <button class="btn primary-btn" id="close-thanks">Close</button>
+        </div>
+    </div>
 
-        const mobileMenuButton = document.getElementById('mobileMenuButton');
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
